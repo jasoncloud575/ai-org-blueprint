@@ -1,0 +1,8 @@
+# 絕不進版控:任何可能含真實資料的東西
+*_real*
+*.env
+user_profile*
+inbox_*
+*holdings*
+*.db
+scratch/
