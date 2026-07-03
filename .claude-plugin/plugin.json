@@ -1,8 +1,17 @@
 {
   "name": "ai-org-governance",
   "description": "Governance disciplines for running AI agents on high-stakes work: verification gates, anti-hallucination protocol, an adversarial dissenter, and stale-note discipline. Distilled from two years of real operation.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
-  "keywords": ["ai-safety", "ai-alignment", "agent-governance", "verification", "red-teaming", "multi-agent"],
-  "skills": ["./skills/ai-org-governance"]
+  "keywords": [
+    "ai-safety",
+    "ai-alignment",
+    "agent-governance",
+    "verification",
+    "red-teaming",
+    "multi-agent"
+  ],
+  "skills": [
+    "./skills/ai-org-governance"
+  ]
 }

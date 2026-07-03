@@ -10,6 +10,18 @@ Behavioral disciplines distilled from two years of running AI agents on work whe
 
 Apply these whenever an agent's output could drive a real decision.
 
+## What's in this skill
+
+| File | Use |
+|------|-----|
+| **SKILL.md** (this) | The five disciplines — read first |
+| [CHECKLIST.md](CHECKLIST.md) | Run these checks against your own output before it reaches a human |
+| [EVIDENCE.md](EVIDENCE.md) | The real incident + data behind each discipline (de-identified) |
+| [tools/stale_note_check.py](tools/stale_note_check.py) | Runnable guard for Discipline 3 (exit 1 = stale, re-verify) |
+| [examples/anchor_gate](../../examples/anchor_gate/) | Runnable demo of Discipline 2 (a gate catching a fabricated number) |
+
+Not just guidance — the disciplines come with runnable checks and the evidence that produced them.
+
 ## 1. Verify before you assert — capability and confabulation share a surface
 
 An agent sounds exactly as confident when it is right as when it is fabricating. You cannot read reliability off its manner.

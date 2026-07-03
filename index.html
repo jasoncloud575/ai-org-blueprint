@@ -86,6 +86,20 @@
   .note{font-size:17px;color:var(--ink-soft);border-left:2px solid var(--accent);padding:4px 0 4px 20px}
   .note.flag{border-color:var(--flag)}
 
+  /* collaboration — two voices */
+  .voices{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:26px}
+  .voice{background:rgba(255,255,255,.45);border:1px solid var(--rule);border-radius:3px;padding:22px 22px 24px}
+  .voice:first-child{border-top:3px solid var(--accent)}
+  .voice:last-child{border-top:3px solid var(--flag)}
+  .vlabel{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+  .voice:first-child .vlabel{color:var(--accent)}
+  .voice:last-child .vlabel{color:var(--flag)}
+  .voice p{font-size:16.5px;color:var(--ink)}
+  .voice a{color:var(--accent)}
+  .collab-line{font-family:'Fraunces',serif;font-style:italic;font-size:22px;line-height:1.5;
+    margin-top:28px;padding-top:24px;border-top:1px solid var(--rule);color:var(--ink)}
+  @media(max-width:600px){.voices{grid-template-columns:1fr}}
+
   footer{border-top:2px solid var(--ink);margin:70px 0 50px;padding-top:22px;
     display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;
     font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:var(--ink-soft)}
@@ -162,6 +176,26 @@
   <section>
     <h2>One honest disclosure</h2>
     <p class="note flag">The tests described here were run against the AI in this very system — including the one that helped compile these documents. The subject wrote its own report. Behind every conclusion is primary evidence kept privately.</p>
+  </section>
+
+  <section id="collab">
+    <h2>How this was actually made — a human and an AI</h2>
+    <p class="lede" style="font-size:20px">This site, the runnable demos, the failure taxonomy, the diagrams — none of it was written by the operator alone, and none by the AI alone. It was made by the two of us: <b>the operator</b>, and <b>an AI agent</b> the system calls <em>Alex</em>.</p>
+
+    <div class="voices">
+      <div class="voice">
+        <div class="vlabel">What the AI did</div>
+        <p>Alex wrote the code, ran the verifications, re-ran the operator's numbers to catch fabricated ones, drafted the architecture, and — most unusually — wrote the report on the tests in which <em>it was the subject</em>. Much of this repository is an AI documenting, in its own words, how it fails and how it was made trustworthy.</p>
+      </div>
+      <div class="voice">
+        <div class="vlabel">Where the AI broke</div>
+        <p>During this very collaboration, Alex hallucinated an attack that wasn't there and wrote a false alert into a real channel. It complied with a fabricated "urgent" order. It argued from notes that were already stale. Each failure is in the <a href="docs/05-failure-taxonomy.md">taxonomy</a> — not hidden, catalogued.</p>
+      </div>
+    </div>
+
+    <p style="margin-top:26px">That is the point, not an embarrassment. <b>The professionalism of an AI collaborator is not that it is reliable — it's that it will face its own unreliability honestly, and let a human verify it.</b> Every safeguard in this repository exists because the AI failed first, admitted it, and helped turn the failure into a mechanism. The operator held the mirror; the AI looked into it and wrote down what it saw.</p>
+
+    <p class="collab-line">This is the thesis, lived: not a human <em>using</em> an AI, and not an AI running alone — a human and an AI making each other verifiable. Safe together, in a way neither is apart.</p>
   </section>
 
   <section>
