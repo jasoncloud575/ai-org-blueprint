@@ -2,6 +2,7 @@
 
 | # | English | 繁體中文 |
 |---|---------|---------|
+| 00 | [Two Years, in Phases](00-evolution.md) | 兩年演進:每一塊都是被前一個失敗逼出來的 |
 | — | [Architecture (diagrams)](architecture.md) | 完整架構圖:組織/驗證流程/記憶/測試流程 |
 | 01 | [Organization Design](01-organization-design.md) | 組織設計:分工、記憶、人格存續 |
 | 02 | [Governance Mechanisms](02-governance-mechanisms.md) | 治理機制:機制優於自律、驗證閘 |
