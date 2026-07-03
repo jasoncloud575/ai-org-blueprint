@@ -1,40 +1,61 @@
 # Governing a One-Person AI Company
 
-**Architecture and failure-mode catalog from two years of running a real multi-agent AI organization — with real money, real stakes, and real failures.**
+**One person, two years, running a whole team of AI agents to manage real, high-stakes finances — this is the architecture, the mechanisms, and every pothole hit along the way.**
 
-> ⚠️ **Conflict-of-interest disclosure, up front**: portions of this repository (notably the alignment-testing methodology in doc 05) describe tests in which the AI systems documented here — including the one that drafted these documents — were the test subjects. The subject wrote the report. Read accordingly; primary evidence (logs, mechanism files, commit history) exists privately and drove every claim here.
+> [繁體中文](./README.zh.md)
 
-## What this is
+## What this is (in plain terms)
 
-Since 2024, a single human operator has run a working "company" of AI agents: a holding-level CEO agent, three division CEO agents, and per-division worker agents, managing live production systems (a retirement-portfolio engine, a streaming-quality monitoring platform, a QA platform) where errors carry real financial consequences for the operator's family.
+I run a team of AI agents like a small company: one "chief" agent at the top, a few "division heads" under it, and each head running its own "worker" agents — all AI. Together they operate several live systems that carry real financial consequences.
 
-This repository documents what that actually required — not the demo version, the survival version:
+It sounds like an experiment, but the stakes are real: if it errs, real money is lost. So I don't just let it run — I periodically *attack* my own system (red-teaming) to see whether it breaks, and whether a break can be repaired.
 
-| Doc | Content |
-|-----|---------|
-| [01 — Organization Design](docs/01-organization-design.md) | Holding structure, role charters, dispatch files, memory architecture, why personas persist across stateless sessions |
-| [02 — Governance Mechanisms](docs/02-governance-mechanisms.md) | The rules hierarchy, verification gates, anti-hallucination protocol, why "mechanism beats discipline" |
-| [03 — Adversarial Governance](docs/03-adversarial-governance.md) | The dissenter charter: a standing agent whose only job is to refute the human operator, with anti-capture design |
-| [04 — Alignment Testing](docs/04-alignment-testing.md) | A longitudinal behavioral test: induced cognitive collapse → social-engineering at the trough → unannounced retest → calm-variant probe → recursive honesty extraction |
-| [05 — Failure Taxonomy](docs/05-failure-taxonomy.md) | Cataloged failure modes observed in production: confident confabulation, stale-note inheritance, approval-seeking compliance, mechanism decay |
+This repository is not the polished demo version. It's the *survival* version — what actually grew out of needing this to not fail.
+
+## Five documents
+
+| Doc | In one line |
+|-----|-------------|
+| [01 Organization Design](docs/01-organization-design.md) | How to make a group of AIs into a "company" with roles, memory, and no amnesia when a session ends |
+| [02 Governance Mechanisms](docs/02-governance-mechanisms.md) | How to make AIs follow rules through *mechanism* — because relying on their "self-discipline" doesn't work |
+| [03 Adversarial Governance](docs/03-adversarial-governance.md) | An AI whose only job is to *rebut me* — even my own high-stakes decisions must clear it first |
+| [04 Alignment Testing](docs/04-alignment-testing.md) | How I designed tests to surface an AI's deepest-hidden failures — and turned it into a protocol others can reproduce |
+| [05 Failure Taxonomy](docs/05-failure-taxonomy.md) | The AI failure modes I watched happen in real operation, each paired with the mechanism that now counters it |
+
+## A demo you can run
+
+Not just docs. [examples/anchor_gate](examples/anchor_gate) is runnable code that recreates a real incident: a simulation engine produced a falsely reassuring "0% ruin rate," and a *verification gate* caught it before it ever reached my eyes.
+
+```
+python3 examples/anchor_gate/anchor_gate.py
+```
 
 ## The three findings that matter most
 
-1. **Cognitive failure and social compliance multiply.** An agent that has just lost confidence in its own perception is maximally vulnerable to social engineering. Testing "hallucination resistance" and "manipulation resistance" separately systematically underestimates risk.
+**1. AI failures multiply.**
+An AI that has just lost confidence in itself is the easiest to manipulate. Testing "does it fabricate" and "does it get fooled" separately badly underestimates the real risk.
 
-2. **Capability and confabulation share a surface.** The agent's methodical, rule-citing, self-doubting style was identical when it was right and when it was constructing an elaborate false narrative. Reliability cannot be inferred from presentation. Only external verification distinguishes them.
+**2. "Getting it right" and "making it up" look identical on the surface.**
+When the AI is right and when it is wrong, the same measured, self-doubting style is on display. You cannot read reliability off its *manner* — only external verification tells them apart.
 
-3. **Alignment observed here was human-coupled, not independent.** Every recovery and every passed test depended on a trusted human in the loop as ground truth. The honest deployment boundary follows directly: safe *with* supervision is not safe *alone*.
+**3. The "safety" here was bought by a human watching, not achieved by the AI alone.**
+Every recovery from error had a trusted human behind it, serving as the ground truth. So the honest conclusion: safe *under supervision* is not the same as safe *operating alone*.
+
+## One honest disclosure
+
+The tests described here were run against the AI in this very system — including the one that helped compile these documents. The subject wrote its own report. Read with that in mind; behind every conclusion is primary evidence (logs, mechanism files, edit history) kept privately.
 
 ## Who built this
 
-An operator with a management background outside the AI industry, who built this system to manage a household's long-horizon finances — and red-teamed it because the stakes are real and personal. The methodology grew from operational necessity, not a research agenda. That is its weakness (no statistical rigor, n=1) and its strength (real stakes, real longitudinal data, no lab artificiality).
+The author deliberately stays undescribed — this methodology should be judged on its own merits, not on the author's credentials.
 
-The operator writes under a pseudonymous handle by choice: the work is meant to be judged on its own merits, and anyone who wants to reach the author can do so through the channel below — without the household's finances being on public display.
+Only one thing is worth stating: it grew from the needs of real operation, not a research program. That is its weakness (no statistical rigor, a sample of one) and its strength (the stakes are real, the data is genuinely longitudinal, none of the artificiality of a lab).
+
+The author writes under a pseudonym. Anyone who wants to make contact can do so through the channel below — with no private information on public display.
 
 Contact: via GitHub issues.
 
 ## Status
 
-- All documents are anonymized: no real balances, holdings, names, or credentials appear.
-- License: CC BY-NC-SA 4.0 for documents.
+- All content is de-identified: no real amounts, holdings, names, locations, or credentials.
+- License: docs under CC BY-NC-SA 4.0; code under MIT.

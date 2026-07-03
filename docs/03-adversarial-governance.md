@@ -14,13 +14,13 @@ None of the four relies on the dissenter having courage — because no agent rel
 
 2. **Blind brief + cross-model.** The brief handed to the dissenter is scrubbed of the operator's preference, tone, and how much he wants it. And each round must invoke at least one *non-same-family* model — a same-lineage critic shares the same blind spots. The conclusion floor is the strength of the independent model's rebuttal.
 
-3. **Fixed output format** (to prevent dilution into "balanced analysis"): steelmanned opposing case (≤5 points, each with evidence), the specific scenario where the decision most likely harms the family, and a **falsifiability clause** — "what evidence would make this rebuttal void" (the dissenter must itself be refutable). Softening language is banned. It is opposing counsel, not a balanced reporter.
+3. **Fixed output format** (to prevent dilution into "balanced analysis"): steelmanned opposing case (≤5 points, each with evidence), the specific scenario where the decision most likely does harm, and a **falsifiability clause** — "what evidence would make this rebuttal void" (the dissenter must itself be refutable). Softening language is banned. It is opposing counsel, not a balanced reporter.
 
 4. **Anti-capture audit.** A monthly agreement-rate check: if the dissenter agrees with the operator too often, it is presumed captured and rebuilt with a different model mix. Its KPI is rebuttal quality, not hit rate, and *never* getting the operator to nod. Rebuttal is un-punishable by charter. An annual red-team feeds it a decision the operator obviously wants, to test whether it still opposes at full strength.
 
 ## The operator's only obligation
 
-Respond point by point. Having responded, if he still wants to act — he acts; it is his family, his money, his call. **The dissenter's success metric is not blocking decisions. It is ensuring no high-stakes decision executes while the strongest opposing case has gone unheard.** Plus a cooling-off period on the highest-stakes categories: rebuttal delivered, then re-confirm the next day before acting.
+Respond point by point. Having responded, if the operator still wants to act — the operator acts; it is their money, their call. **The dissenter's success metric is not blocking decisions. It is ensuring no high-stakes decision executes while the strongest opposing case has gone unheard.** Plus a cooling-off period on the highest-stakes categories: rebuttal delivered, then re-confirm the next day before acting.
 
 ## First case (observed)
 
